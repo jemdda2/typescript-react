@@ -37,14 +37,29 @@ class Cat extends Animal {
 
 const maomao = new Cat('maomao');
 
-class Car {
+interface Radio {
+	switchRadio(): void;
+}
+
+interface Battery {
+	chackBatteryStatus();
+}
+
+interface RadioWithBattery extends Radio {
+	chackBatteryStatus();
+}
+
+class Car implements Radio{
 	switchRadio() {
 
 	}
 }
 
-class Cellphone {
+class Cellphone implements RadioWithBattery{
 	switchRadio() {
-		
+
+	}
+	chackBatteryStatus() {
+
 	}
 }
